@@ -1,5 +1,6 @@
 # Session data and project-specific files
 projects/
+ide/
 
 # Analytics and cache files
 statsig/
