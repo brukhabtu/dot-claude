@@ -38,7 +38,21 @@ Custom slash commands available in this configuration:
 - `/document-all` - Generate comprehensive documentation using parallel Task agents
 - `/journal-entry` - Add session summary to today's daily note
 - `/parallel-plan` - Create implementation plans with parallel execution
+- `/pr-comment-ids` - Extract comment IDs from GitHub PR discussions
+- `/pr-resolve-all` - Resolve all GitHub PR comment discussions
+- `/pr-unresolved` - Show unresolved GitHub PR comment discussions
 - `/quality` - Run quality checks and analysis
+- `/update-toc` - Update table of contents in markdown files
+- `/validate-vault` - Validate Obsidian vault structure and links
+
+## Available Tools
+
+Custom tools and scripts in this configuration:
+
+- `check_silent_exceptions.py` - Analyze code for silent exception handling patterns
+- `link-to-obsidian.py` - Create symlink between vault and docs folder
+- `pr_comments.sh` - Shell script for GitHub PR comment management
+- `update-toc.py` - Python script to automatically update table of contents
 
 ## Setup
 
