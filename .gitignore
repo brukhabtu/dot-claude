@@ -1,0 +1,27 @@
+# Session data and project-specific files
+projects/
+
+# Analytics and cache files
+statsig/
+
+# Personal todos
+todos/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
