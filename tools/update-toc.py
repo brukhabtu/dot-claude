@@ -68,28 +68,26 @@ def update_toc(claude_file):
                     # End of note block - insert TOC content
                     toc_found = True
                     inside_note_block = False
-                    # Add note block header
-                    new_lines.extend(note_block_lines[:-1])  # All but last empty line
-                    # Add TOC content as quoted lines
+                    # Add note block header (first line only)
+                    new_lines.append(note_block_lines[0])
+                    # Add TOC content as quoted lines (no empty lines)
                     for toc_line in toc_content.split('\n'):
                         if toc_line.strip():
                             new_lines.append(f"> {toc_line}\n")
                     new_lines.append(">\n")  # Final empty quote line
-                    new_lines.append("\n")   # Blank line after note block
                     note_block_lines = []
                 continue
             else:
                 # End of note block reached
                 toc_found = True
                 inside_note_block = False
-                # Add note block header
-                new_lines.extend(note_block_lines)
-                # Add TOC content as quoted lines
+                # Add note block header (first line only)
+                new_lines.append(note_block_lines[0])
+                # Add TOC content as quoted lines (no empty lines)
                 for toc_line in toc_content.split('\n'):
                     if toc_line.strip():
                         new_lines.append(f"> {toc_line}\n")
                 new_lines.append(">\n")  # Final empty quote line
-                new_lines.append("\n")   # Blank line after note block
                 new_lines.append(line)   # Current line
                 note_block_lines = []
                 continue
